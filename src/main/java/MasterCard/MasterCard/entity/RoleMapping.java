@@ -17,13 +17,7 @@ import javax.persistence.Id;
 
 public class RoleMapping {
 
-    public Integer getSr() {
-        return sr;
-    }
-
-    public void setSr(Integer sr) {
-        this.sr = sr;
-    }
+   
 
     @Id
     Integer sr;
@@ -34,6 +28,13 @@ public class RoleMapping {
     Integer detailResponseCount;
 
 
+     public Integer getSr() {
+        return sr;
+    }
+
+    public void setSr(Integer sr) {
+        this.sr = sr;
+    }
 
     public String getRoleName() {
         return roleName;
