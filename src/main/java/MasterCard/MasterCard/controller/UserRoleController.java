@@ -32,13 +32,6 @@ public class UserRoleController {
     @Autowired
      ResponseMapping responseMapping;
 
-
-  /*  @PostMapping("/billing/user-roles")
-    ResponseEntity<String> hello() {
-        return ResponseEntity.ok("");
-    }
-   */
-
     @PutMapping("/billing/user-roles/{id}")
    public ResponseEntity<String> updateUserRoles(@RequestBody UserRoles userRoles,@PathVariable String id) {
         serviceUserRoleModel.updateUserRoles(userRoles,id);
@@ -67,7 +60,6 @@ public class UserRoleController {
         String rolename= userRoleRepository.findByUserId(userId).getRoleName();
         responseMapping.setRoleMappingFields(roleMappingRepository.findByRoleName(rolename));
         responseMapping.setElementMappingFields(elementMappingRepository.returnelements(Feeder,rolename));
-       //  return  elementMappingRepository.returnelements(Feeder,rolename);
         return  responseMapping;
     }
 

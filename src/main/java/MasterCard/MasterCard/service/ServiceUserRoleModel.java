@@ -37,7 +37,6 @@ public class ServiceUserRoleModel {
 
     public void deleteuserRoles(String userId) {
        userRoleRepository.delete(displayUserRole().stream().filter(t->t.getUserId().equals(userId)).findFirst().get());
-        //userRoleRepository.deleteByUserId(userId);
     }
 
     public String getCurrentDate(){

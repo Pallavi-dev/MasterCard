@@ -12,9 +12,4 @@ public interface UserRoleRepository extends JpaRepository<UserRoles,Integer> {
 
     UserRoles findByUserId(String id);
 
-    @Query("FROM UserRoles WHERE ID>22")
-    List<UserRoles> findIdgreater();
-
-
-   // void deleteByUserId();
 }
