@@ -1,6 +1,6 @@
 
 
-INSERT INTO USER_ROLES(id,role_Name,role_Description,ICA,STATUS,user_Id) VALUES (3,'EXTERNAL','TestRole','TEST','ACTIVE','pallavi123')
+INSERT INTO USER_ROLES(id,role_Name,role_Description,ICA,STATUS,user_Id) VALUES (3,'EXTERNAL','TestRole','TEST','ACTIVE','pallavi123');
 INSERT INTO USER_ROLES(id,role_Name,role_Description,ICA,STATUS,user_Id) VALUES (4,'BILL_OPS','DevelopmentRole','TEST','ACTIVE','upesh');
 INSERT INTO USER_ROLES(id,role_Name,role_Description,ICA,STATUS,user_Id) VALUES (5,'BILL_DEV','DevelopmentRole','TEST','ACTIVE','mohit');
 INSERT INTO USER_ROLES(id,role_Name,role_Description,ICA,STATUS,user_Id) VALUES (6,'TAM','DevelopmentRole','TEST','ACTIVE','leela');
@@ -21,5 +21,5 @@ INSERT INTO ROLE_MAPPING(role_Name,download_Detail_Count,download_Summary_Count,
 INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,As) VALUES(2,'AUTH','IME_TRACE_ID','BILL_OPS','Y','imeTraceId');
 INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,As) VALUES(3,'AUTH','MTI_FUNC_CD','BILL_OPS','N','mtiFunction');
 INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,As) VALUES(4,'AUTH','MTI_FUNC_CD','BILL_PROJ','Y','mtiFunction');
-INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,As) VALUES(4,'AUTH','MTI_FUNC_CD','BILL_biz','Y','mtiFunction')
+INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,As) VALUES(5,'AUTH','MTI_FUNC_CD','BILL_biz','Y','mtiFunction');
 
