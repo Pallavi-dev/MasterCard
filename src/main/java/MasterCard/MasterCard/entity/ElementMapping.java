@@ -24,6 +24,6 @@ public class ElementMapping  {
     String elements;
     String roleName;
     String enable;
-    String as;
+    String asFields;
 
 }

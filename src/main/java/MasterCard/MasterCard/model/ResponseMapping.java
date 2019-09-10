@@ -40,7 +40,7 @@ public class ResponseMapping {
     public void setElementMappingFields(List<ElementMapping> elementMappingFields) {
 
      this.DetailFields=elementMappingFields.stream().map(i->i.getElements()).collect(Collectors.toList());
-     this.AsFields =elementMappingFields.stream().map(i->i.getAs()).collect(Collectors.toList());
+     this.AsFields =elementMappingFields.stream().map(i->i.getAsFields()).collect(Collectors.toList());
 
     }
 }

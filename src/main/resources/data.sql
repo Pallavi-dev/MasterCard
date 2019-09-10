@@ -18,8 +18,8 @@ INSERT INTO ROLE_MAPPING(role_Name,download_Detail_Count,download_Summary_Count,
 INSERT INTO ROLE_MAPPING(role_Name,download_Detail_Count,download_Summary_Count,summary_Response_Count,detail_Response_Count) VALUES ('BILL_PROJ',100000,100000,300,300);
 
 
-INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,As) VALUES(2,'AUTH','IME_TRACE_ID','BILL_OPS','Y','imeTraceId');
-INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,As) VALUES(3,'AUTH','MTI_FUNC_CD','BILL_OPS','N','mtiFunction');
-INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,As) VALUES(4,'AUTH','MTI_FUNC_CD','BILL_PROJ','Y','mtiFunction');
-INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,As) VALUES(5,'AUTH','MTI_FUNC_CD','BILL_biz','Y','mtiFunction');
+INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,as_Fields) VALUES(2,'AUTH','IME_TRACE_ID','BILL_OPS','Y','imeTraceId');
+INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,as_Fields) VALUES(3,'AUTH','MTI_FUNC_CD','BILL_OPS','N','mtiFunction');
+INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,as_Fields) VALUES(4,'AUTH','MTI_FUNC_CD','BILL_PROJ','Y','mtiFunction');
+INSERT INTO ELEMENT_MAPPING(id,feeder,elements,role_Name,enable,as_Fields) VALUES(5,'AUTH','MTI_FUNC_CD','BILL_biz','Y','mtiFunction');
 

@@ -15,7 +15,7 @@ public class ServiceUserRoleModel {
     UserRoleRepository userRoleRepository;
 
     public void storeUserRole(UserRoles userRoles){
-        userRoles.setCreatedTimeStamp(getCurrentDate());
+        userRoles.setCreatedTimestamp(getCurrentDate());
         userRoleRepository.save(userRoles);
     }
 
@@ -28,10 +28,10 @@ public class ServiceUserRoleModel {
     public void updateUserRoles(UserRoles userRoles,String id) {
 
         UserRoles u= displayUserRole().stream().filter(t->t.getUserId().equals(id)).findFirst().get();
-        userRoles.setCreatedTimeStamp(u.getCreatedTimeStamp());
+        userRoles.setCreatedTimestamp(u.getCreatedTimestamp());
         userRoles.setId(u.getId());
         userRoles.setUserId(u.getUserId());
-        userRoles.setLastUpdatedTimeStamp(getCurrentDate());
+        userRoles.setLastUpdatedTimestamp(getCurrentDate().toString());
         userRoleRepository.save(userRoles);
         }
 
@@ -39,11 +39,11 @@ public class ServiceUserRoleModel {
        userRoleRepository.delete(displayUserRole().stream().filter(t->t.getUserId().equals(userId)).findFirst().get());
     }
 
-    public String getCurrentDate(){
+    public Date getCurrentDate(){
         Date date= new Date();
         long time = date. getTime();
         Timestamp timestamp=new Timestamp(time);
-        return timestamp.toString();
+        return timestamp;
     }
 
 }

@@ -5,9 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -25,7 +27,11 @@ public class UserRoles {
     private String roleDescription;
     private String ica;
     private String status;
-    private String createdTimeStamp;
-    private String lastUpdatedTimeStamp;
+
+    @Basic(optional = false)
+    @Column(insertable = false, updatable = false)
+    @CreationTimestamp
+    private Date createdTimestamp;
+    private String lastUpdatedTimestamp;
 
 }
