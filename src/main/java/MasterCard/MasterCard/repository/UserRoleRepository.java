@@ -11,5 +11,4 @@ import java.util.List;
 public interface UserRoleRepository extends JpaRepository<UserRoles,String> {
 
     UserRoles findByUserId(String id);
-
 }

@@ -23,5 +23,4 @@ public class RoleMapping {
     Integer downloadSummaryCount;
     Integer summaryResponseCount;
     Integer detailResponseCount;
-
-   }
+}
