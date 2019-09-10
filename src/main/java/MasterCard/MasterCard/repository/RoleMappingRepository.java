@@ -8,5 +8,4 @@ public interface RoleMappingRepository extends JpaRepository<RoleMapping,Integer
 
     RoleMapping findByRoleName(String RoleName);
 
-
 }

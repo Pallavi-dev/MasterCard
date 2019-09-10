@@ -1,6 +1,7 @@
 package MasterCard.MasterCard.controller;
 
 import MasterCard.MasterCard.entity.ElementMapping;
+import MasterCard.MasterCard.entity.RoleMapping;
 import MasterCard.MasterCard.entity.UserRoles;
 import MasterCard.MasterCard.model.ResponseMapping;
 import MasterCard.MasterCard.repository.ElementMappingRepository;
@@ -18,20 +19,20 @@ import java.util.List;
 public class UserRoleController {
 
     @Autowired
-    ServiceUserRoleModel serviceUserRoleModel;
+     ServiceUserRoleModel serviceUserRoleModel;
 
     @Autowired
-    UserRoleRepository userRoleRepository;
-
-   /*@Autowired
-   RoleMappingRepository roleMappingRepository;
+     UserRoleRepository userRoleRepository;
 
    @Autowired
-    ElementMappingRepository elementMappingRepository;
+     RoleMappingRepository roleMappingRepository;
+
+   @Autowired
+     ElementMappingRepository elementMappingRepository;
 
    @Autowired
      ResponseMapping responseMapping;
-*/
+
 
     @PutMapping("/billing/user-roles/{id}")
    public ResponseEntity<String> updateUserRoles(@RequestBody UserRoles userRoles,@PathVariable String id) {
@@ -56,12 +57,11 @@ public class UserRoleController {
     }
 
     @GetMapping("/billing/user-roles")
-    public String getuser(@RequestParam String userId, @RequestParam String Feeder){
-
+    public ResponseMapping getuser(@RequestParam String userId, @RequestParam String Feeder){
         String rolename= userRoleRepository.findByUserId(userId).getRoleName();
-       //responseMapping.setRoleMappingFields(roleMappingRepository.findByRoleName(rolename));
-     //  responseMapping.setElementMappingFields(elementMappingRepository.returnelements(Feeder,rolename));
-       return  rolename;
+        responseMapping.setRoleMappingFields(roleMappingRepository.findByRoleName(rolename));
+        responseMapping.setElementMappingFields(elementMappingRepository.returnelements(Feeder,rolename));
+        return  responseMapping;
     }
 
 }
