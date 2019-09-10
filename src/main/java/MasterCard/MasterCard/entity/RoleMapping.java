@@ -18,12 +18,10 @@ import javax.persistence.Id;
 public class RoleMapping {
 
     @Id
-    Integer sr;
     String  roleName;
     Integer downloadDetailCount;
     Integer downloadSummaryCount;
     Integer summaryResponseCount;
     Integer detailResponseCount;
-
 
    }

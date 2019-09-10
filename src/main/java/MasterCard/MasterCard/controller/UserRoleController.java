@@ -23,14 +23,15 @@ public class UserRoleController {
     @Autowired
     UserRoleRepository userRoleRepository;
 
-   @Autowired
+   /*@Autowired
    RoleMappingRepository roleMappingRepository;
 
    @Autowired
     ElementMappingRepository elementMappingRepository;
 
-    @Autowired
+   @Autowired
      ResponseMapping responseMapping;
+     */
 
     @PutMapping("/billing/user-roles/{id}")
    public ResponseEntity<String> updateUserRoles(@RequestBody UserRoles userRoles,@PathVariable String id) {
@@ -55,12 +56,12 @@ public class UserRoleController {
     }
 
     @GetMapping("/billing/user-roles")
-    public ResponseMapping getuser(@RequestParam String userId, @RequestParam String Feeder){
+    public String getuser(@RequestParam String userId, @RequestParam String Feeder){
 
         String rolename= userRoleRepository.findByUserId(userId).getRoleName();
-        responseMapping.setRoleMappingFields(roleMappingRepository.findByRoleName(rolename));
-        responseMapping.setElementMappingFields(elementMappingRepository.returnelements(Feeder,rolename));
-        return  responseMapping;
+       //responseMapping.setRoleMappingFields(roleMappingRepository.findByRoleName(rolename));
+     //  responseMapping.setElementMappingFields(elementMappingRepository.returnelements(Feeder,rolename));
+       return  rolename;
     }
 
 }

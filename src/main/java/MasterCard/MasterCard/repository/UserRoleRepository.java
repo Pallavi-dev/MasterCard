@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 
-public interface UserRoleRepository extends JpaRepository<UserRoles,Integer> {
+public interface UserRoleRepository extends JpaRepository<UserRoles,String> {
 
     UserRoles findByUserId(String id);
 

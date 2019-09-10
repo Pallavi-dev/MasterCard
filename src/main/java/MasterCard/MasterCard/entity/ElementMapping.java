@@ -19,11 +19,11 @@ import javax.persistence.Id;
 public class ElementMapping  {
 
     @Id
-    Integer Id;
-    String Feeder;
-    String Elements;
-    String RoleName;
-    String  Enable;
-    String As;
+    Integer id;
+    String feeder;
+    String elements;
+    String roleName;
+    String enable;
+    String as;
 
 }
