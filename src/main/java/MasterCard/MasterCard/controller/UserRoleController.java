@@ -3,6 +3,7 @@ package MasterCard.MasterCard.controller;
 import MasterCard.MasterCard.entity.ElementMapping;
 import MasterCard.MasterCard.entity.RoleMapping;
 import MasterCard.MasterCard.entity.UserRoles;
+import MasterCard.MasterCard.model.ElementMappingCompositeKey;
 import MasterCard.MasterCard.model.ResponseMapping;
 import MasterCard.MasterCard.repository.ElementMappingRepository;
 import MasterCard.MasterCard.repository.RoleMappingRepository;
@@ -33,7 +34,6 @@ public class UserRoleController {
    @Autowired
      ResponseMapping responseMapping;
 
-
     @PutMapping("/billing/user-roles/{id}")
    public ResponseEntity<String> updateUserRoles(@RequestBody UserRoles userRoles,@PathVariable String id) {
         serviceUserRoleModel.updateUserRoles(userRoles,id);
@@ -60,7 +60,7 @@ public class UserRoleController {
     public ResponseMapping getuser(@RequestParam String userId, @RequestParam String Feeder){
         String rolename= userRoleRepository.findByUserId(userId).getRoleName();
         responseMapping.setRoleMappingFields(roleMappingRepository.findByRoleName(rolename));
-        responseMapping.setElementMappingFields(elementMappingRepository.returnelements(Feeder,rolename));
+        responseMapping.setElementMappingFields(elementMappingRepository.returnElements(Feeder,rolename));
         return  responseMapping;
     }
 
